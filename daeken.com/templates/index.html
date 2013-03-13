@@ -1,0 +1,13 @@
+% for post in posts:
+	<h1><a href="${post['link']}">${post['title']}</a></h1>
+	${post['html']}
+	<br>
+% endfor
+<br>
+% if prev:
+	<a href="${prev}">Previous</a>
+% endif
+Page ${page}
+% if next:
+	<a href="${next}">Next</a>
+% endif
