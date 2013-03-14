@@ -1,3 +1,5 @@
+## -*- coding: utf-8 -*-
+
 <%inherit file="top.html" />
 <%block name="title">
 	Home
@@ -7,15 +9,26 @@
 </%block>
 
 % for post in posts:
-	<h1><a href="${post['link']}">${post['title']}</a></h1>
-	${post['html']}
-	<br>
+	<div class="post">
+		<div class="grid_6 alpha">
+			<h1 class="post-title"><a href="${post['link']}">${post['title']}</a></h1>
+		</div>
+		<div class="grid_2 omega date">
+			${post['date']}
+		</div>
+		<div class="grid_8 post-body">
+			${post['html']}
+		</div>
+	</div>
 % endfor
-<br>
-% if prev:
-	<a href="${prev}">Previous</a>
-% endif
-Page ${page}
-% if next:
-	<a href="${next}">Next</a>
+% if prev or next:
+	<div class="grid_8 pagenav alpha">
+		% if prev:
+			<a href="${prev}">Previous</a> |
+		% endif
+		Page ${page} of ${pages}
+		% if next:
+			| <a href="${next}">Next</a>
+		% endif
+	</div>
 % endif

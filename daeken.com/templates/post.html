@@ -1,5 +1,16 @@
+## -*- coding: utf-8 -*-
+
 <%inherit file="top.html" />
 <%block name="title">${post['title']}</%block>
 
-<h1>${post['title']}</h1>
-${post['html']}
+<div class="post">
+	<div class="grid_6 alpha">
+		<h1 class="post-title"><a href="${post['link']}">${post['title']}</a></h1>
+	</div>
+	<div class="grid_2 omega date">
+		${post['date']}
+	</div>
+	<div class="grid_8">
+		${post['html']}
+	</div>
+</div>

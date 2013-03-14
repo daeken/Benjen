@@ -1,5 +1,5 @@
 from glob import glob
-import os, re, shutil, sys, yaml
+import codecs, os, re, shutil, sys, yaml
 from markdown import markdown as pmarkdown
 from functools import *
 
@@ -41,6 +41,7 @@ class Benjen(object):
 
 		self.entries = []
 		for entry in raw.values():
+			entry = entry.decode('utf-8')
 			title = None
 			date = None
 			while True:
@@ -54,6 +55,8 @@ class Benjen(object):
 					date = rest
 				else:
 					assert False
+
+			print title
 
 			fn = date + '_' + self.title_sub(title) + '.html'
 			self.entries.append(dict(
@@ -72,7 +75,7 @@ class Benjen(object):
 		recent = self.entries[:self.config['recent_posts']]
 		genFn = lambda i: 'index.html' if i == 0 else 'index_%i.html' % (i / per)
 		for i in xrange(0, len(self.entries), per):
-			with file(self.out + genFn(i), 'w') as fp:
+			with codecs.open(self.out + genFn(i), 'w', 'utf-8') as fp:
 				fp.write(self.render('index', 
 					page=(i / per) + 1, 
 					pages=(len(self.entries) + per - 1) / per, 
@@ -83,7 +86,7 @@ class Benjen(object):
 				))
 
 	def generate_post(self, post):
-		with file(self.out + post['file'], 'w') as fp:
+		with codecs.open(self.out + post['file'], 'w', 'utf-8') as fp:
 			fp.write(self.render('post', post=post))
 
 if __name__=='__main__':

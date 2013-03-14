@@ -17,18 +17,25 @@ body {
 	color: #004B63;
 	font-size: 2em;
 	padding-top: 1em;
-}
-
-h1.post {
-	font-size: 1.7em;
+	text-align: right;
 }
 
 h1.post-title {
 	font-size: 2em;
 }
 
-h2.post {
+h1 {
+	font-size: 1.7em;
+}
+
+h2 {
 	font-size: 1.3em;
+}
+
+.date {
+	color: #636363;
+	margin-top: 1.0em;
+	text-align: right;
 }
 
 a {
@@ -36,24 +43,39 @@ a {
 	color: #047F91;
 }
 
-.sidebar {
-	border-left: 1px dashed gray;
-	padding-left: 1em;
-}
-
 .pagenav {
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: bold;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 ul {
 	list-style-type: square;
 }
 
-.ad-border {
-	width: 100%;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	margin-left: -1em;
-	border-bottom: 1px dashed gray;
+pre {
+	padding-left: 0.5em;
+	margin-left: 1em;
+	border-left: 2px solid #047F91;
+	height: 100%;
+}
+
+code {
+	font-family: 'Cutive Mono', serif;
+}
+
+.sidebar {
+	margin-top: 1.0em;
+}
+
+blockquote {
+	padding-left: 0.5em;
+	margin-left: 1em;
+	border-left: 2px solid #636363;
+	height: 100%;
+}
+
+.post-body {
+	margin-bottom: 2em;
 }
