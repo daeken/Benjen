@@ -1,3 +1,11 @@
+<%inherit file="top.html" />
+<%block name="title">
+	Home
+	% if pages != 1:
+		[${page}/${pages}]
+	% endif
+</%block>
+
 % for post in posts:
 	<h1><a href="${post['link']}">${post['title']}</a></h1>
 	${post['html']}

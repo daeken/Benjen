@@ -1,3 +1,4 @@
 root: ://demoseen.com/blog/
 per_page: 5
 path: out
+recent_posts: 10

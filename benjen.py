@@ -1,5 +1,5 @@
 from glob import glob
-import os, re, sys, yaml
+import os, re, shutil, sys, yaml
 from markdown import markdown as pmarkdown
 from functools import *
 
@@ -18,10 +18,8 @@ class Benjen(object):
 		self.out = self.config['path']
 		if self.out[-1] != '/':
 			self.out += '/'
-		try:
-			os.makedirs(self.out)
-		except:
-			pass
+		shutil.rmtree(self.out, ignore_errors=True)
+		shutil.copytree('static', self.out)
 
 		self.load_entries()
 
@@ -71,14 +69,17 @@ class Benjen(object):
 
 	def generate_indexes(self):
 		per = self.config['per_page']
+		recent = self.entries[:self.config['recent_posts']]
 		genFn = lambda i: 'index.html' if i == 0 else 'index_%i.html' % (i / per)
 		for i in xrange(0, len(self.entries), per):
 			with file(self.out + genFn(i), 'w') as fp:
 				fp.write(self.render('index', 
 					page=(i / per) + 1, 
+					pages=(len(self.entries) + per - 1) / per, 
 					prev=None if i == 0 else self.link(genFn(i - per)), 
 					next=None if i + per >= len(self.entries) else self.link(genFn(i + per)), 
-					posts=self.entries[i:i+per]
+					posts=self.entries[i:i+per], 
+					recent_posts=recent
 				))
 
 	def generate_post(self, post):
