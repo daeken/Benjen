@@ -1,8 +1,6 @@
 #title Demo a week, week 1: Waveride
 #date 2010-03-25
 
-# 
-
 For a long time, I've sat on the sidelines of the [demoscene][1], generally watching in awe as ASD, Farbrausch, Conspiracy, and others produce amazing works of art. I recently decided that I'd jump in and see what I can do, and to accomplish that I've decided to start releasing a demo a week. My goal is to get my feet wet and learn how to actually build something beautiful.
 
  [1]: http://en.wikipedia.org/wiki/Demoscene

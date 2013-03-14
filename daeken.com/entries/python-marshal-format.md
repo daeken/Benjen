@@ -1,8 +1,6 @@
 #title Python Marshal Format
 #date 2010-02-20
 
-# 
-
 Earlier this week, I had to deal with some files in Python's marshal format (some `.pyc` files, specifically) in Ruby and discovered that the details of this format aren't documented. Since it's meant to be purely internal, the Python team has decided not to document it in any way.
 
 The marshal format is used in `.pyc` files, lots of internal storage for random apps, etc. It's a shame that it's undocumented, as this means that there are, to my knowledge, no implementations for other languages. This also means that if you have a malicious marshal blob, you have to load it up with Python to play around with it; not a good idea.

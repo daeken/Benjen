@@ -1,8 +1,6 @@
 #title Emokit status, JsDataFlowEditor, and looking for work
 #date 2010-09-25
 
-# 
-
 Before discussing new stuff, a little update on the progress of [Emokit][1]. Emokit is now completely able to parse the EEG data coming from the Consumer and Developer headsets, and thanks to skadge now contains proper Linux support, the beginnings of a C library, and quite a few other fun features. At this point, the only things left to reverse-engineer are the battery meter and contact qualities. Huge thanks to everyone who's supported us -- it's been invaluable!
 
  [1]: http://github.com/daeken/Emokit

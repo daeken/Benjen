@@ -1,8 +1,6 @@
 #title Partially Destructive Garbage Collection
 #date 2009-07-02
 
-# 
-
 While lying in bed and trying to sleep last night, I had an idea I'd 
 like some feedback on. The idea is partially destructive garbage 
 collection, which allows the runtime to handle caching, instead of the 

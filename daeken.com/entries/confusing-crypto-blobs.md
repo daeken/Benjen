@@ -1,8 +1,6 @@
 #title Confusing Crypto Blobs
 #date 2012-10-20
 
-# 
-
 # Introduction
 
 In 2011, [CCBill][1] ran a bug bounty program. While they didn't pay much per-bug, there were enough low-hanging fruit available to make it fairly lucrative; you could find a couple bugs in an hour and make some quick money. So for a month or two, I'd dedicate one or two nights a week to hunting down bugs and reporting them. As you can see from the [rewards page][2] that worked out pretty well. However, one of the most interesting bugs I found isn't on there. This is the story of that bug.

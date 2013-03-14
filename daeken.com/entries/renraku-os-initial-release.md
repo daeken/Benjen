@@ -1,8 +1,6 @@
 #title Renraku OS: Initial Release
 #date 2009-07-17
 
-# 
-
 ![][1]   
    
 The Renraku OS team is proud to announce the first release, 0.1alpha.   

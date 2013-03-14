@@ -1,8 +1,6 @@
 #title Emokit: Hacking the Emotiv EPOC Brain-Computer Interface
 #date 2010-09-13
 
-# 
-
 # Update
 
 Emokit fully supports the Emotiv headset and has functional Python and C interfaces. It's now maintained as part of [OpenYou][1] under the loving care of Kyle Machulis. The official repo is now at . Many thanks to everyone who helped out with the project.

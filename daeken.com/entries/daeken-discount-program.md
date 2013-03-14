@@ -1,8 +1,6 @@
 #title Daeken Discount Program
 #date 2010-02-26
 
-# 
-
 (Edit: The Daeken Discount Program is closed.  While an interesting exercise, it resulted in only one sale, but it was of the 25% discount level so I can't complain too heavily.  If nothing else, it was fun to try something.)
 
 A long while back, I saw people selling shares in themselves. That is, you invest in the person and get a portion of their earnings and such, just like investing in a company. While I like the idea in theory, I can't see selling off a large (1 %) part of myself that I'll likely never get back. However, the idea's stuck with me. So while I was laying in bed last night, I came up with an idea.

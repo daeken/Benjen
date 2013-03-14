@@ -1,8 +1,6 @@
 #title More Illegal Numbers
 #date 2009-10-29
 
-# 
-
 Texas Instruments has decided to C&D the UnitedTI forum for distributing the TI83 signing key ([as reported here][1]).  This makes another beautiful illegal number.  Distribute it far and wide -- no number should be illegal to distribute.
 
  [1]: http://spectrum.ieee.org/consumer-electronics/gadgets/for-texas-instruments-calculator-hackers-dont-add-up/0

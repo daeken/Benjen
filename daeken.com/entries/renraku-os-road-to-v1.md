@@ -1,8 +1,6 @@
 #title Renraku OS: Road to v1
 #date 2010-01-23
 
-# 
-
 Renraku has seen a renewed surge of energy in the past few weeks, and has made big strides. Here's what's going on.
 
 # Where we are

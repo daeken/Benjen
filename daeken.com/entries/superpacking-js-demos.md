@@ -1,8 +1,6 @@
 #title Superpacking JS Demos
 #date 2011-08-31
 
-# 
-
 # Background
 
 The techniques I'm going to be describing here were created and/or implemented to pack my entry to the [Mozilla Demoparty][1]: [Magister][2]. Huge thanks to my friend Nicolás Alvarez for helping squeeze every last byte out of this.

@@ -1,8 +1,6 @@
 #title Demo a week, week 2: Armitage
 #date 2010-04-02
 
-# 
-
 Well, this demo is coming a bit late. After days of fighting with OpenGL and GLSL, I finally have a demo that's fairly presentable. It's still not great (by any means), but it's an improvement over last week's demo and that's the goal. Sadly, this week's demo has compatibility issues out the ass -- I suddenly understand why everyone goes D3D for the demoscene. My next demo will almost definitely be D3D10, due to familiarity and geometry shaders. We'll see.
 
 Anyway, you can get the build at . If you give it a shot, let me know what video card you're using and whether it worked or not. I'll be releasing the source in the next day or two if anyone wants to play with it, and as always, the NFO is below.

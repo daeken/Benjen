@@ -1,8 +1,6 @@
 #title Renraku OS: The Way Up
 #date 2009-08-06
 
-# 
-
 ![][1]   
    
 It's now been just over a month since this iteration of the Renraku   

@@ -1,8 +1,6 @@
 #title Reversing The Pokerstars Protocol, Part 1: Compression and transport 	basics
 #date 2009-08-19
 
-# 
-
 Let me start with a little background. I got into poker botting after reading James Devlin's great series on [Coding The Wheel](http://www.codingthewheel.com/). I tried a few different attempts at the IO layer (hooking the poker client directly, screenscraping (wrote a cool little library), etc) before settling on hacking the protocol directly. However, I also started getting into actually playing poker heavily, and I realized a little while ago that there's no way this bot will be profitable (including my time) unless I throw years of work at it, so I've decided to release my knowledge publicly. I've not seen anyone reversing the PStars (or any other service, in fact) protocol publicly, so I'm hoping to help out there.
 
 The likelihood of things staying the same after this is released is very slim, so for reference my work is being done on the latest client as of today, 8/19/09, version 3.1.5.8. All code is available on the [Github repo](http://github.com/daeken/PSReverse/tree/master), and I'll be doing code releases to correspond with the parts of this guide. This stuff will only work on Windows with Python 2.6 . 

@@ -1,8 +1,6 @@
 #title Onity's Plan To Mitigate Hotel Lock Hack
 #date 2012-08-17
 
-# 
-
 # Onity responds
 
 On August 13th, 2012, Onity released their plan to mitigate the vulnerabilities in the Onity HT hotel lock line that I released at BlackHat this year. My previous post on the subject is available at .

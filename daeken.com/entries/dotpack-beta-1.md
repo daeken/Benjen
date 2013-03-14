@@ -1,8 +1,6 @@
 #title Dotpack Beta 1
 #date 2010-04-09
 
-# 
-
 Edit: Due to a high troll rate on this post, I've temporarily disabled commenting.  If you'd like to leave feedback, please email me at cody.brocious@gmail.com or drop a comment on the Hacker News thread  .
 
 I'm proud to announce the first beta of Dotpack, a packer for .NET executables. I've been working on this for the last week or so and finally have something fit for public eyes. It started out of my desire to build 64k demos on .NET and for that reason it's very small -- as of this writing, it's sitting at 5331 bytes overhead. It also achieves high compression ratios due to its use of LZMA; average size reduction for the files I've tested has been 60-80%.

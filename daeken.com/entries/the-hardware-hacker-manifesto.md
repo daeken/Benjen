@@ -1,8 +1,6 @@
 #title The Hardware Hacker Manifesto
 #date 2010-09-21
 
-# 
-
 **Edit: I've decided to release this post under a CC Attributed license. Share it, copy it, edit it, whatever you feel like, just attribute it back to me.**  
 The Hardware Hacker Manifesto by [Cody Brocious][2] is licensed under a [Creative Commons Attribution 3.0 Unported License][3].
 

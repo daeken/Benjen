@@ -1,8 +1,6 @@
 #title Looking for work
 #date 2010-09-24
 
-# 
-
 **Update: I've [taken a job][1], but I'm going to leave this post here for historical reasons.**
 
  [1]: http://daeken.com/new-job

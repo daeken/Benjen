@@ -1,8 +1,6 @@
 #title Renraku OS: FAQ
 #date 2009-11-19
 
-# 
-
 This is the current Renraku OS FAQ. If you have a question that's not answered here, feel free to join us in #renraku on irc.freenode.net.
 
 ## What is Renraku OS?

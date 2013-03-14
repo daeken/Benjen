@@ -1,8 +1,6 @@
 #title Distributed Balance
 #date 2013-02-21
 
-# 
-
 So, I've been quiet for long enough and it's time to discuss my plan. I've long said that we need a revolution, but that I didn't know the form in which it would come; I know that now. This is Distributed Balance.
 
 # Background
