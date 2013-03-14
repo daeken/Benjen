@@ -1,3 +1,59 @@
-h1 {
-	color: red;
+body {
+	background: url(satinweave.png) repeat;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 110%;
+}
+
+.header {
+	padding-bottom: 2em;
+}
+
+.title {
+	color: #004B63;
+	font-size: 4em;
+}
+
+.subtitle {
+	color: #004B63;
+	font-size: 2em;
+	padding-top: 1em;
+}
+
+h1.post {
+	font-size: 1.7em;
+}
+
+h1.post-title {
+	font-size: 2em;
+}
+
+h2.post {
+	font-size: 1.3em;
+}
+
+a {
+	text-decoration: none;
+	color: #047F91;
+}
+
+.sidebar {
+	border-left: 1px dashed gray;
+	padding-left: 1em;
+}
+
+.pagenav {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: square;
+}
+
+.ad-border {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: -1em;
+	border-bottom: 1px dashed gray;
 }
