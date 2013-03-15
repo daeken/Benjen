@@ -21,7 +21,7 @@ Note: I wrote all of this for the 2.x line. I don't know how much has changed in
 
 These types contain no data and are simply representations of Python constants.
 
-*   `` (`TYPE_NULL`) -- Used to null terminate dictionaries and to represent the serialization of a null object internally (not sure if this can happen or not).
+*   `0` (`TYPE_NULL`) -- Used to null terminate dictionaries and to represent the serialization of a null object internally (not sure if this can happen or not).
 *   `N` (`TYPE_NONE`) -- Represents the `None` object.
 *   `F` (`TYPE_FALSE`) -- Represents the `False` object.
 *   `T` (`TYPE_TRUE`) -- Represents the `True` object.
@@ -50,7 +50,7 @@ These types contain no data and are simply representations of Python constants.
 *   `(` (`TYPE_TUPLE`) -- Represents a `tuple`. Stored as a `int32` followed by that many objects, which are marshalled as well.
 *   `[` (`TYPE_LIST`) -- Represents a `list`. Stored identically to `TYPE_TUPLE`.
 *   `{` (`TYPE_DICT`) -- Represents a `dict`. Stored as a series of marshalled key-value pairs. At the end of the dict, you'll have a "key" that consists of a `TYPE_NULL`; there's no value following it.
-*   `` (`TYPE_FROZENSET`) -- Represents a `frozenset`. Stored identically to `TYPE_TUPLE`.
+*   `>` (`TYPE_FROZENSET`) -- Represents a `frozenset`. Stored identically to `TYPE_TUPLE`.
 
 ## Code objects
 
@@ -73,7 +73,7 @@ They consist of the following fields:
 *   `freevars` (`object`) -- Tuple of "free" variables. (Can anyone clarify this a bit?)
 *   `cellvars` (`object`) -- Tuple of variables used in nested functions.
 *   `filename` (`object`) -- String containing the original filename this code object was generated from.
-*   `name` (`object`) -- Name of the function. If it's the top level code object in a `.pyc`, this will be ``.
+*   `name` (`object`) -- Name of the function. If it's the top level code object in a `.pyc`, this will be `<module>`.
 *   `firstlineno` (`int32`) -- First line number of the code this code object was generated from.
 *   `lnotab` (`object`) -- String mapping bytecode offsets to line numbers. Haven't delved into the details here.
 

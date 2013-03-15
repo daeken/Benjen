@@ -20,6 +20,7 @@ Rule #1 of shrinking demos: removing a byte becomes more difficult every time yo
 
 These are a couple useful techniques to trim the fat at this point.
 
+    :::javascript
     var a = g.getAttribLocation(x, 'pos');
     g.uniform1f(g.getUniformLocation(x, 'time'), t);
     g.vertexAttribPointer(a, 2, g.FLOAT, 0, 0, 0);
@@ -27,6 +28,7 @@ These are a couple useful techniques to trim the fat at this point.
 
 What's wrong with this picture? Well, if we ignore whitespace (minification takes care of that): we're using `var` (pfft, correctness), we have a shader attribute with a 3-byte name and a uniform with a 4-byte name, we're using g.FLOAT (more on this in a moment), and we've got a lot of zeros.
 
+    :::javascript
     g.vertexAttribPointer(
         a = g.getAttribLocation(x, 'p'), 
         2, 
@@ -48,10 +50,12 @@ What is the global namespace in JS? Normally, it comes from the `window` object.
 
 Right now the declaration of `g` is as such:
 
+    :::javascript
     g = z.getContext('experimental-webgl')
 
 But let's change it to:
 
+    :::javascript
     for(k in g = z.getContext('experimental-webgl'))
         top[k] = g[k].bind && g[k].bind(g);
 
@@ -86,6 +90,7 @@ Holy moly, that's a lot of bytes! But these are defined in WebGL, how can we cha
 
 Welllll... let's look back at our globalization code. We get a name, `k`, and then bind `g[k]` into `top[k]`. But we control what `k` goes into `top`. Having a map of long name into short name would be expensive, but what about a regex? I'm going to spare you the gory details, but after a while of tinkering with it, I determined that the optimal code for this is:
 
+    :::javascript
     t[k.slice(1, -5).replace(/[ntalruicoh]/ig, '')] = 
         t[k] = g[k].bind && g[k].bind(g);
 
@@ -118,10 +123,12 @@ Night and day difference, as you can see. You'll obviously want to change the re
 
 Arrays of digits tend to be pretty wasteful:
 
+    :::javascript
     new Float32Array([0,0,2,0,0,2,2,0,2,2,0,2])
 
 What about this instead?
 
+    :::javascript
     new Float32Array('002002202202'.split(''))
 
 The more digits you have, the bigger the win from this replacement is. Until we get to compression and everything changes.
@@ -161,8 +168,6 @@ We start by defining our own chunk type (we're allowed to do that!) before the I
     4 byte CRC
 
 What is the bootstrap? Well, it's what turns our PNG into code and runs it. Here's the one I use:
-
-    
 
 The 4968 here is really the size of the decompressed data in bytes times 4 -- there are 4 components to each pixel (red, green, blue, alpha) but we're only using grayscale, so we need to offset that. If you look carefully, you'll also notice that it walks backwards across the data, which should create a string in reverse, but I compensate for that when I compress the data, and reverse it before doing so. This saves a couple bytes. The image source is also important: rather than hard-coding the image filename and wasting space, it uses `#`, enabling it to treat itself as a PNG.
 

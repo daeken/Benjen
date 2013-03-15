@@ -1,6 +1,6 @@
 from glob import glob
 import codecs, os, re, shutil, sys, yaml
-from markdown import markdown as pmarkdown
+from markdown import markdown
 from functools import *
 
 from mako.template import Template
@@ -28,12 +28,6 @@ class Benjen(object):
 
 	def render(self, name, **kwargs):
 		return self.lookup.get_template('/' + name + '.html').render(**kwargs)
-
-	def markdown(self, text):
-		return pmarkdown(text)
-
-	def link(self, fn):
-		return fn
 
 	title_sub = partial(re.compile(r'[^a-zA-Z0-9_\-"\']').sub, '_')
 	def load_entries(self):
@@ -63,9 +57,8 @@ class Benjen(object):
 				title=title, 
 				date=date, 
 				raw=entry, 
-				html=self.markdown(entry), 
-				file=fn, 
-				link=self.link(fn)
+				html=markdown(entry, extensions=['codehilite(guess_lang=False)']), 
+				link=fn
 			))
 
 		self.entries.sort(lambda a, b: cmp(b['date'], a['date']))
@@ -79,14 +72,17 @@ class Benjen(object):
 				fp.write(self.render('index', 
 					page=(i / per) + 1, 
 					pages=(len(self.entries) + per - 1) / per, 
-					prev=None if i == 0 else self.link(genFn(i - per)), 
-					next=None if i + per >= len(self.entries) else self.link(genFn(i + per)), 
+					prev=None if i == 0 else genFn(i - per), 
+					next=None if i + per >= len(self.entries) else genFn(i + per), 
 					posts=self.entries[i:i+per], 
 					recent_posts=recent
 				))
 
+		with codecs.open(self.out + 'archive.html', 'w', 'utf-8') as fp:
+			fp.write(self.render('archive', posts=self.entries))
+
 	def generate_post(self, post):
-		with codecs.open(self.out + post['file'], 'w', 'utf-8') as fp:
+		with codecs.open(self.out + post['link'], 'w', 'utf-8') as fp:
 			fp.write(self.render('post', post=post))
 
 if __name__=='__main__':

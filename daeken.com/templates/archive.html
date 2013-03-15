@@ -1,0 +1,10 @@
+## -*- coding: utf-8 -*-
+
+<%inherit file="top.html" />
+<%block name="title">Archive</%block>
+
+<ul>
+% for post in posts:
+	<li><a href="${post['link']}">${post['date']} &ndash; ${post['title']}</a></li>
+% endfor
+</ul>
