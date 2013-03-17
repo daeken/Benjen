@@ -60,6 +60,32 @@ The `config.yaml` file describes a dict with the following values:
 - per_page -- How many posts to show per index page
 - recent_posts -- How many elements to put in the recent_posts list for index pages
 
+Git Hook
+--------
+
+If you want to generate your blog automatically on your server when you push updates, you can set up a Git repo and hook to do this.
+
+Basic steps:
+
+- On your server, initialize a bare repository
+	- `mkdir barerepo && cd barerepo`
+	- `git init --bare`
+- Push your blog to that git repository (see [http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server](http://git-scm.com/book/en/Git-on-the-Server-Setting-Up-the-Server) if you need more info than that)
+- Again on your server, clone the bare repository
+	- `git clone barerepo realrepo`
+
+Once you've done this, you need to add a file called post-receive to barerepo/hooks/ and make it executable.
+Sample hook:
+
+	#!/bin/bash
+	unset GIT_DIR
+	cd /path/to/realrepo/blog/directory/
+	git pull origin master
+	benjen
+
+When you push to the server's repository, it will automatically pull the latest contents into realrepo and then run Benjen.
+Make sure you change the repository names/paths accordingly.
+
 That's all!
 -----------
 
