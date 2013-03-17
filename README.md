@@ -52,6 +52,8 @@ Post objects are dicts containing the following values:
 - html -- HTML version
 - link -- Filename for the post
 
+The `static` directory contains any static data to copy into the output path.  This is where you'll want to put your CSS.  Note: the Markdown output will be using Pygments for [code highlighting](http://pythonhosted.org/Markdown/extensions/code_hilite.html), so you'll need to add the appropriate CSS rules for it (see also: [https://github.com/richleland/pygments-css](https://github.com/richleland/pygments-css)).
+
 The `config.yaml` file describes a dict with the following values:
 
 - path -- Path for Benjen to output files (this can be absolute or relative from the blog directory)
