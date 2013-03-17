@@ -59,8 +59,8 @@ Must-have Tools
 Below is a list of tools that you should have in your arsenal.  Some of them are categories with more than one tool -- unless explicitly mentioned, they're roughly interchangable.
 
 - HTTP(S) proxy -- This you will use constantly, as it will allow you to analyze and modify data in-flight
+	- [Burp Proxy](http://portswigger.net/burp/proxy.html) -- Unless you have good reason not to, you should use this.  It's the industry standard and by far the shallowest learning curve.
 	- [mitmproxy](http://mitmproxy.org/)
-	- [Burp Proxy](http://portswigger.net/burp/proxy.html)
 	- [Charles Proxy](http://www.charlesproxy.com/) (UI is terrible -- only use it for [AMF](http://en.wikipedia.org/wiki/Action_Message_Format))
 - [DirBuster](https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project) -- Useful for finding 'hidden' files/directories
 - [PadBuster](https://github.com/GDSSecurity/PadBuster) -- Useful for exploiting padding overflow vulnerabilities
