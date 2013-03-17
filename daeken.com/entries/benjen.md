@@ -4,6 +4,8 @@
 I've just released the first version of my new blog engine -- powering this site! -- for public consumption.
 It's a super simple Python script, allowing for a huge amount of customization without so much as touching the actual blog engine.
 
+This was built in response to Posterous' announcement to shut down, which I had been using for this blog previously.
+
 How it works
 ============
 
