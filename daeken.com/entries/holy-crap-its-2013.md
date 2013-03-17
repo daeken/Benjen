@@ -16,7 +16,7 @@ It's a new year, so it's time for a quick wrapup post.
 # This Year
 
 *   As always, I have something new and interesting brewing, which I'll be showing off in the next few months.
-*   I have an upcoming series of posts on getting into security, which you can [read a preview of][4].
+*   I have an upcoming series of posts on getting into security, of which you can [read a preview][4].
 *   I started work at Accuvant LABS, where I'm a Senior Security Consultant.
 *   I'm going to be splitting my time between the middle of nowhere in Connecticut, and Barcelona, starting in April.
 *   QtzWeb -- the previously mentioned project -- is getting a web-based editor to cut Quartz Composer out of the picture entirely. This has a lot of potential for interactive 3d content on the web.
