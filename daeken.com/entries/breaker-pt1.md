@@ -86,8 +86,6 @@ These are fairly uncommon but are not protected against by most web frameworks; 
 In all cases, they are protected against by filtering user data before output, but it's important to encode for the right case.
 For example, HTML encoding won't serve to protect anything if the data is being output inside of a script tag; in such cases, JS string output encoding is needed.
 
-### References
-
 - [OWASP](https://www.owasp.org/index.php/Top_10_2010-A2-Cross-Site_Scripting_(XSS))
 - [Wikipedia](http://en.wikipedia.org/wiki/Cross-site_scripting)
 
@@ -101,8 +99,6 @@ To the server, this looks just like a legitimate request and it's performed as i
 
 Protection against CSRF takes the form of random tokens that are put into the form bodies of pages and then submitted with each request; the server checks the token and ensures it's a match for the user's current random token in the session and rejects requests that don't match.
 Most modern web frameworks have built-in CSRF protection but it remains a very common vulnerability.
-
-### References
 
 - [OWASP](https://www.owasp.org/index.php/Top_10_2010-A5)
 - [Wikipedia](http://en.wikipedia.org/wiki/Cross-site_request_forgery)
@@ -118,8 +114,6 @@ Depending on the code and the database configuration, this can range from bad (b
 Most modern frameworks are protected from this due to their use of an ORM; everything else should use parameterized queries where possible.
 When a raw query with attacker data mixed in is the only route, proper escaping *must* be used.
 
-### References
-
 - [OWASP](https://www.owasp.org/index.php/Top_10_2010-A1)
 - [Wikipedia](http://en.wikipedia.org/wiki/SQL_injection)
 
@@ -131,8 +125,6 @@ When user data is fed into a shell command without filtering, it's possible -- t
 
 Code calling out to a shell command using user data should always prefer execution methods where an array of arguments is provided (this is naturally immune), and use the appropriate shell escaping functions when raw command strings are built.
 
-### References
-
 - [Wikipedia](http://en.wikipedia.org/wiki/Code_injection#Shell_injection)
 
 Directory Traversal
@@ -141,8 +133,6 @@ Directory Traversal
 The most common forms of directory traversal are those where user data is directly used to construct a path to a file on the system.
 Without proper filtering in such cases, it's possible to insert a reference to the ".." directory entry, to walk up the directory tree.
 This can allow arbitrary reading/writing/deletion of files and is very frequently a critical vulnerability.
-
-### References
 
 - [Wikipedia](http://en.wikipedia.org/wiki/Directory_traversal_attack)
 
@@ -154,8 +144,6 @@ A good example is a properly access-controlled administration console which has 
 
 This is often seen in conjunction with forced browsing, in the case of improper controls on data.
 
-### References
-
 - [OWASP](https://www.owasp.org/index.php/Top_10_2010-A8)
 
 Forced Browsing
@@ -163,8 +151,6 @@ Forced Browsing
 
 Forced browsing -- also known as direct object reference -- is a class of vulnerabilities where an implementation detail is exposed to users in a modifiable way.
 Most commonly, this takes the form of an easily modifiable `id` parameter in requests, allowing an attacker to simply enumerate all possible identifiers to access/modify data.
-
-### References
 
 - [OWASP](https://www.owasp.org/index.php/Top_10_2010-A4)
 
