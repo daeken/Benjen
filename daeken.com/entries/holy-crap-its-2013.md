@@ -25,5 +25,5 @@ It's a new year, so it's time for a quick wrapup post.
 
 I'll be posting some more in-depth blog posts soon, but in the meantime have a happy 2013, and thanks to everyone for their support over the last year!
 
-Happy Hacking,   
+Happy Hacking,  
 - Cody Brocious (Daeken)
