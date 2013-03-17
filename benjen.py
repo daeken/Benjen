@@ -85,5 +85,8 @@ class Benjen(object):
 		with codecs.open(self.out + post['link'], 'w', 'utf-8') as fp:
 			fp.write(self.render('post', post=post))
 
-if __name__=='__main__':
+def main():
 	Benjen(*sys.argv[1:])
+
+if __name__=='__main__':
+	main()
