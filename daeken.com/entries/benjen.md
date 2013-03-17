@@ -16,7 +16,7 @@ This all enables a lot of flexibility and power, despite that it can fit on a si
 Example
 =======
 
-You can see this blog on Github here: [https://github.com/daeken/Benjen/tree/master/daeken.com](daeken/benjen)
+You can see this blog on Github here: [daeken/benjen](https://github.com/daeken/Benjen/tree/master/daeken.com)
 
 Next Steps
 ==========
