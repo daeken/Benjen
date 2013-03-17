@@ -28,7 +28,7 @@ class Benjen(object):
     def render(self, name, **kwargs):
         return self.lookup.get_template('/' + name + '.html').render(**kwargs)
 
-    title_sub = partial(re.compile(r'[^a-zA-Z0-9_\-"\']').sub, '_')
+    title_sub = partial(re.compile(r'[^a-zA-Z0-9_\-]').sub, '_')
     def load_entries(self):
         raw = load_all('entries')
 
