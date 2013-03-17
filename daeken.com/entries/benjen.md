@@ -26,5 +26,5 @@ I'm hoping to package this nicely as a git post-receive hook, so that you can ju
 
 If anyone has other ideas, shoot me an email and let me know: [cody.brocious@gmail.com](mailto:cody.brocious@gmail.com)
 
-Happy Hacking,  
+Happy hacking,  
 - Cody Brocious (Daeken)
