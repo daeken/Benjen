@@ -5,13 +5,9 @@ It's a new year, so it's time for a quick wrapup post.
 
 # Last Year
 
-*   Obviously the big thing was my [Black Hat USA talk][1] on breaking hotel locks. The attention it's received has been insane; I never expected anyone outside the lock industry to care about it, but it's been featured in every major publication and even on national TV. Quite an experience.
+*   Obviously the big thing was my [Black Hat USA talk](http://daeken.com/blackhat-paper) on breaking hotel locks. The attention it's received has been insane; I never expected anyone outside the lock industry to care about it, but it's been featured in every major publication and even on national TV. Quite an experience.
 *   I spent February-December working for Mozilla on the Boot2Gecko/Firefox OS project. Lots of interesting experiences and a great team.
-*   In November I built QtzWeb, the first Quartz Composer implementation not by Apple, compiling it to JS WebGL. I released the [first demo][2] using it at Kindergarden, and dropped the [source on Github][3] recently.
-
- [1]: http://daeken.com/blackhat-paper
- [2]: http://pouet.net/prod.php?which=60732
- [3]: https://github.com/daeken/Qtzweb
+*   In November I built QtzWeb, the first Quartz Composer implementation not by Apple, compiling it to JS WebGL. I released the [first demo](http://pouet.net/prod.php?which=60732) using it at Kindergarden, and dropped the [source on Github](https://github.com/daeken/Qtzweb) recently.
 
 # This Year
 
