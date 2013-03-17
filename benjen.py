@@ -1,9 +1,8 @@
 from glob import glob
-import codecs, os, re, shutil, sys, yaml
+import codecs, re, shutil, sys, yaml
 from markdown import markdown
 from functools import *
 
-from mako.template import Template
 from mako.lookup import TemplateLookup
 
 def load_all(dir):
