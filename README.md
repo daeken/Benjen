@@ -63,4 +63,4 @@ The `config.yaml` file describes a dict with the following values:
 That's all!
 -----------
 
-If you have issues, contact me at [mailto:cody.brocious@gmail.com](cody.brocious@gmail.com) or use Github's issue tracker.
+If you have issues, contact me at [cody.brocious@gmail.com](mailto:cody.brocious@gmail.com) or use Github's issue tracker.
