@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from glob import glob
 import codecs, re, shutil, sys, yaml
 from markdown import markdown
