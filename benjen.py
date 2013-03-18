@@ -7,7 +7,7 @@ from functools import partial
 from mako.lookup import TemplateLookup
 
 def load_all(dir):
-    return [file(fn, 'r').read() for fn in glob(dir + '/*')]
+    return [file(fn, 'r').read().decode('utf-8') for fn in glob(dir + '/*')]
 
 class Benjen(object):
     def __init__(self):
@@ -35,22 +35,24 @@ class Benjen(object):
 
         self.entries = []
         for entry in raw:
-            entry = entry.decode('utf-8')
-            title = None
-            date = None
-            while True:
-                if not entry or entry[0] != '#':
-                    break
-                line, entry = entry.split('\n', 1)
-                type, rest = line[1:].split(' ', 1)
-                if type == 'title':
-                    title = rest
-                elif type == 'date':
-                    date = rest
-                else:
-                    assert False
+            date = title = None
+            lines = entry.split("\n", 2)
+            # We expect atleast 3 entries here.. title, date and entry
+            if len(lines) < 3:
+                # Invalid entry format.. skip
+                continue
 
-            print title
+            if lines[0].startswith("#title"):
+                title = lines[0][6:].strip()
+            if lines[1].startswith("#date"):
+                date = lines[1][5:].strip()
+ 
+            entry = lines[2]
+            if not date or not title:
+                # Invalid entry format.. skip
+                continue
+
+            print "Processed %s" % title
 
             fn = date + '_' + self.title_sub(title) + '.html'
             self.entries.append(dict(
