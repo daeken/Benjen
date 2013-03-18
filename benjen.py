@@ -3,12 +3,11 @@
 from glob import glob
 import codecs, re, shutil, sys, yaml
 from markdown import markdown
-from functools import *
-
+from functools import partial
 from mako.lookup import TemplateLookup
 
 def load_all(dir):
-    return {fn[len(dir)+1:] : file(fn, 'r').read() for fn in glob(dir + '/*')}
+    return [file(fn, 'r').read() for fn in glob(dir + '/*')]
 
 class Benjen(object):
     def __init__(self):
@@ -35,7 +34,7 @@ class Benjen(object):
         raw = load_all('entries')
 
         self.entries = []
-        for entry in raw.values():
+        for entry in raw:
             entry = entry.decode('utf-8')
             title = None
             date = None
