@@ -1,3 +1,6 @@
 per_page: 5
 path: /home/daeken/demoseen/blog
+root_url: http://daeken.com/
 recent_posts: 10
+rss_title: I, Hacker
+rss_description: Hacking and music and activism, oh my!
