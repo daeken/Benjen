@@ -24,6 +24,8 @@ Next Steps
 I'm hoping to package this nicely as a git post-receive hook, so that you can just push your blog to a repository and have it automatically rebuilt on the server.
 (**Update**: This is now done and documented in the README.)
 
+**Update #2**: Benjen v1.1 is out with RSS support.
+
 If anyone has other ideas, shoot me an email and let me know: [cody.brocious@gmail.com](mailto:cody.brocious@gmail.com)
 
 Happy hacking,  
