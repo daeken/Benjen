@@ -77,7 +77,7 @@ class Benjen(object):
             fp.write(self.render('post', post=post))
 
     def generate_rss(self):
-        if 'rss_title' not in self.config:
+        if 'rss_title' not in self.config or 'rss_description' not in self.config:
             return
         RSS2(
             title=self.config['rss_title'], 

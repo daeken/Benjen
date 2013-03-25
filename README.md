@@ -59,6 +59,9 @@ The `config.yaml` file describes a dict with the following values:
 - path -- Path for Benjen to output files (this can be absolute or relative from the blog directory)
 - per_page -- How many posts to show per index page
 - recent_posts -- How many elements to put in the recent_posts list for index pages
+- root_url -- Root URL for your blog
+- rss_title -- (Optional) Title for your blog for RSS; without this, your RSS feed will not be generated
+- rss_description -- (Optional) Description for your blog for RSS.
 
 Git Hook
 --------
