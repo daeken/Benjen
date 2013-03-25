@@ -2,3 +2,4 @@ Mako==0.7.3
 Markdown==2.3
 PyYAML==3.10
 Pygments==1.6
+PyRSS2Gen==1.0.0

@@ -23,7 +23,7 @@ class Benjen(object):
         self.generate_indexes()
         map(self.generate_post, self.entries)
         self.generate_rss()
-
+    
     def render(self, name, **kwargs):
         return self.lookup.get_template('/' + name + '.html').render(**kwargs)
 
@@ -94,6 +94,9 @@ class Benjen(object):
                 ) for entry in self.entries
             ]
         ).write_xml(file(self.out + 'feed.xml', 'wb'), encoding='utf-8')
+
+def main():
+    Benjen()
 
 if __name__=='__main__':
     Benjen()
