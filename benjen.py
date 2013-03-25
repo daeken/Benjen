@@ -90,7 +90,7 @@ class Benjen(object):
                     link=self.root_url + entry['link'], 
                     description=entry['html'], 
                     guid=Guid(self.root_url + entry['link']), 
-                    pubDate=datetime.datetime.strptime(entry['date'], '%Y-%m-%d')
+                    pubDate=datetime.datetime.strptime(entry['date'][:10], '%Y-%m-%d')
                 ) for entry in self.entries
             ]
         ).write_xml(file(self.out + 'feed.xml', 'wb'), encoding='utf-8')

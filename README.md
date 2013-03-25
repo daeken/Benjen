@@ -30,6 +30,8 @@ These should, however, contain the following lines at the beginning:
 	#title Entry Title Goes Here
 	#date YYYY-MM-DD
 
+Date must be in the YYYY-MM-DD form; however, you can optionally append '.X' to the end of the date, to signify which post it is in a given day.
+
 The `templates` directory contains [Mako templates](http://www.makotemplates.org/).  There are three templates in use, with the following parameters passed in.
 
 - index.html -- Used for index pages
