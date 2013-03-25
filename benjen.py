@@ -1,58 +1,47 @@
 #!/usr/bin/env python
 
 from glob import glob
-import codecs, re, shutil, sys, yaml
+import codecs, datetime, re, shutil, sys, yaml
 from markdown import markdown
 from functools import partial
 from mako.lookup import TemplateLookup
+from PyRSS2Gen import RSS2, RSSItem, Guid
 
-def load_all(dir):
-    return [file(fn, 'r').read().decode('utf-8') for fn in glob(dir + '/*')]
+trailing_slash = lambda x: x if x.endswith('/') else x+'/'
 
 class Benjen(object):
     def __init__(self):
         self.lookup = TemplateLookup(directories=['templates'])
 
         self.config = yaml.load(file('config.yaml'))
-
-        self.out = self.config['path']
-        if self.out[-1] != '/':
-            self.out += '/'
+        self.root_url = trailing_slash(self.config['root_url'])
+        self.out = trailing_slash(self.config['path'])
         shutil.rmtree(self.out, ignore_errors=True)
         shutil.copytree('static', self.out)
 
         self.load_entries()
-
         self.generate_indexes()
         map(self.generate_post, self.entries)
+        self.generate_rss()
 
     def render(self, name, **kwargs):
         return self.lookup.get_template('/' + name + '.html').render(**kwargs)
 
     title_sub = partial(re.compile(r'[^a-zA-Z0-9_\-]').sub, '_')
     def load_entries(self):
-        raw = load_all('entries')
+        raw = (file(fn, 'r').read().decode('utf-8') for fn in glob('entries/*'))
 
         self.entries = []
         for entry in raw:
-            date = title = None
             lines = entry.split("\n", 2)
-            # We expect atleast 3 entries here.. title, date and entry
-            if len(lines) < 3:
-                # Invalid entry format.. skip
-                continue
-
-            if lines[0].startswith("#title"):
+            if len(lines) == 3 and lines[0].startswith("#title") and lines[1].startswith("#date"):
                 title = lines[0][6:].strip()
-            if lines[1].startswith("#date"):
                 date = lines[1][5:].strip()
- 
-            entry = lines[2]
-            if not date or not title:
-                # Invalid entry format.. skip
+                entry = lines[2]
+            else:
                 continue
 
-            print "Processed %s" % title
+            print 'Processed', title
 
             fn = date + '_' + self.title_sub(title) + '.html'
             self.entries.append(dict(
@@ -87,8 +76,24 @@ class Benjen(object):
         with codecs.open(self.out + post['link'], 'w', 'utf-8') as fp:
             fp.write(self.render('post', post=post))
 
-def main():
-    Benjen(*sys.argv[1:])
+    def generate_rss(self):
+        if 'rss_title' not in self.config:
+            return
+        RSS2(
+            title=self.config['rss_title'], 
+            link=self.root_url, 
+            description=self.config['rss_description'], 
+            lastBuildDate=datetime.datetime.now(), 
+            items=[
+                RSSItem(
+                    title=entry['title'], 
+                    link=self.root_url + entry['link'], 
+                    description=entry['html'], 
+                    guid=Guid(self.root_url + entry['link']), 
+                    pubDate=datetime.datetime.strptime(entry['date'], '%Y-%m-%d')
+                ) for entry in self.entries
+            ]
+        ).write_xml(file(self.out + 'feed.xml', 'wb'), encoding='utf-8')
 
 if __name__=='__main__':
-    main()
+    Benjen()
