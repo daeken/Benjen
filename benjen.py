@@ -7,13 +7,12 @@ from functools import partial
 from mako.lookup import TemplateLookup
 from PyRSS2Gen import RSS2, RSSItem, Guid
 
-trailing_slash = lambda x: x if x.endswith('/') else x+'/'
-
 class Benjen(object):
     def __init__(self):
         self.lookup = TemplateLookup(directories=['templates'])
 
         self.config = yaml.load(file('config.yaml'))
+        trailing_slash = lambda x: x if x.endswith('/') else x+'/'
         self.root_url = trailing_slash(self.config['root_url'])
         self.out = trailing_slash(self.config['path'])
         shutil.rmtree(self.out, ignore_errors=True)
