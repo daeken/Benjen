@@ -1,5 +1,5 @@
-#title RMS is a traitor to the Free Software community
-#date 2009-09-26
+title: RMS is a traitor to the Free Software community
+date: 2009-09-26
 
 Yesterday I read about a [comment from RMS at Software Freedom Day in Boston](http://www.osnews.com/story/22225/RMS_De_Icaza_Traitor_to_Free_Software_Community). He referred to Miguel de Icaza as "basically a traitor to the Free Software community". Sorry, but this is too much, even for him.
 

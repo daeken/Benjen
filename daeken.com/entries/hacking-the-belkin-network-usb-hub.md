@@ -1,5 +1,5 @@
-#title Hacking the Belkin Network USB Hub
-#date 2010-09-05
+title: Hacking the Belkin Network USB Hub
+date: 2010-09-05
 
 I've recently been hacking the [Belkin Network USB Hub](http://www.belkin.com/networkusbhub/).  It allows you to connect USB devices to the network and share them between your computers.  The problem?  It's Windows-only and totally undocumented.  The solution?  Reverse-engineering and a Python library, of course.  Btw, if you pick one up, consider getting it from Amazon using my referral link: <iframe src="http://rcm.amazon.com/e/cm?t=iha0a-20&o=1&p=8&l=as1&asins=B000QSN3O6&md=10FE9736YVPPT7A0FBG2&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 

@@ -1,5 +1,5 @@
-#title How To Lose A Customer In Two Lines
-#date 2009-11-13
+title: How To Lose A Customer In Two Lines
+date: 2009-11-13
 
 You know, I'm not a picky customer. When I find a company that does 
 the job well and without causing problems, I tend to stick with them 

@@ -1,5 +1,5 @@
-#title Responsible Disclosure Can Be Anything But
-#date 2012-12-06
+title: Responsible Disclosure Can Be Anything But
+date: 2012-12-06
 
 The last few weeks were full of mixed emotions for me. Reliable reports of [hotel break-ins][1] seemingly utilizing the vulnerability [I disclosed at BlackHat][2] are coming out, and I'm both horrified and vindicated.
 

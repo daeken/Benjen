@@ -1,5 +1,5 @@
-#title Dotpack Beta 1
-#date 2010-04-09
+title: Dotpack Beta 1
+date: 2010-04-09
 
 Edit: Due to a high troll rate on this post, I've temporarily disabled commenting.  If you'd like to leave feedback, please email me at cody.brocious@gmail.com or drop a comment on the Hacker News thread  .
 

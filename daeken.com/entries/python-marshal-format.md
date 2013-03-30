@@ -1,5 +1,5 @@
-#title Python Marshal Format
-#date 2010-02-20
+title: Python Marshal Format
+date: 2010-02-20
 
 Earlier this week, I had to deal with some files in Python's marshal format (some `.pyc` files, specifically) in Ruby and discovered that the details of this format aren't documented. Since it's meant to be purely internal, the Python team has decided not to document it in any way.
 

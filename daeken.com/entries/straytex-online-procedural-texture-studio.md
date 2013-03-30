@@ -1,5 +1,5 @@
-#title Straytex: Online procedural texture studio
-#date 2010-03-27
+title: Straytex: Online procedural texture studio
+date: 2010-03-27
 
 In the course of working on my next demo for my [demo-a-week][1] project, I'm doing a lot of procedural texture generation. The ability to quickly test modifications to my algorithms is crucial, so I decided to whip up a simple texture editor, Straytex (named after Straylight, my demogroup).
 

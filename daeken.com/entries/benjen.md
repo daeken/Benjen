@@ -1,5 +1,5 @@
-#title Benjen v1
-#date 2013-03-17
+title: Benjen v1
+date: 2013-03-17
 
 I've just released the first version of [my new blog engine](https://github.com/daeken/Benjen) -- powering this site! -- for public consumption.
 It's a super simple Python script, allowing for a huge amount of customization without so much as touching the actual blog engine.

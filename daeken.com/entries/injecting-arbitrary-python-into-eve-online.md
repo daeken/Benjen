@@ -1,5 +1,5 @@
-#title Injecting Arbitrary Python Into EVE Online
-#date 2009-09-23
+title: Injecting Arbitrary Python Into EVE Online
+date: 2009-09-23
 
 I finally broke down and installed EVE Online and registered for a trial, since quite a few of my friends have been talking about it nonstop. Being the dork I am, I looked through the binaries that were installed, and I immediately noticed that they shipped Stackless Python 2.5 as a separate binary (python25.dll). Of course, this led me to an investigation of what I could accomplish with respect to modifying the client without actually patching any code. A few hours later, I was able to run any Python code inside of EVE. 
 All of the code is available from the Github repository here: 

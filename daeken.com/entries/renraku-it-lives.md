@@ -1,5 +1,5 @@
-#title Renraku OS: It Lives!
-#date 2009-07-09
+title: Renraku OS: It Lives!
+date: 2009-07-09
 
 This is a follow-up to my previous post, [Renraku: Future OS][1].   
    

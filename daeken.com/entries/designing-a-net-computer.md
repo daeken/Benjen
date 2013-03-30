@@ -1,5 +1,5 @@
-#title Designing a .NET Computer
-#date 2009-11-19
+title: Designing a .NET Computer
+date: 2009-11-19
 
 Developing Renraku has led me to some interesting thoughts, not the least of which is the feasibility of a .NET computer.
 

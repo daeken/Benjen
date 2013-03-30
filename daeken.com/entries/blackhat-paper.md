@@ -1,5 +1,5 @@
-#title Blackhat paper
-#date 2012-07-24
+title: Blackhat paper
+date: 2012-07-24
 
 Well, my talk for Blackhat (My Arduino can beat up your hotel room lock) is over.  Things could've gone better in terms of execution -- went through it too quickly and ended up using 30 minutes of my 60 minute slot.  But people really enjoyed it and I spent a good hour or so answering questions.
 

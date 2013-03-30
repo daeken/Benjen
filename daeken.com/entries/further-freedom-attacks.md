@@ -1,5 +1,5 @@
-#title Further Freedom Attacks
-#date 2010-11-27
+title: Further Freedom Attacks
+date: 2010-11-27
 
 **Please, redistribute this far and wide. Share it, repost it, print it out and hand it to people you see on the street.**  
 Further Freedom Attacks by [Cody Brocious][2] is licensed under a [Creative Commons Attribution 3.0 Unported License][3].

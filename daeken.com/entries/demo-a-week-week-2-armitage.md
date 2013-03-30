@@ -1,5 +1,5 @@
-#title Demo a week, week 2: Armitage
-#date 2010-04-02
+title: Demo a week, week 2: Armitage
+date: 2010-04-02
 
 Well, this demo is coming a bit late. After days of fighting with OpenGL and GLSL, I finally have a demo that's fairly presentable. It's still not great (by any means), but it's an improvement over last week's demo and that's the goal. Sadly, this week's demo has compatibility issues out the ass -- I suddenly understand why everyone goes D3D for the demoscene. My next demo will almost definitely be D3D10, due to familiarity and geometry shaders. We'll see.
 

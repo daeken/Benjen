@@ -1,5 +1,5 @@
-#title Superpacking JS Demos
-#date 2011-08-31
+title: Superpacking JS Demos
+date: 2011-08-31
 
 # Background
 

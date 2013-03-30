@@ -1,5 +1,5 @@
-#title Alky Postmortem
-#date 2009-12-27
+title: Alky Postmortem
+date: 2009-12-27
 
 A lot of people have asked me what happened to the Alky project. The short answer is that we made a lot of bad business moves, but that answer glances over a lot of the fun little details. Having gained considerable knowledge from other stories of failed startups, I figure I'll throw one of my own into the ring.
 

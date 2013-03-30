@@ -1,5 +1,5 @@
-#title Renraku OS: Networking, Hosted Mode, Moving Forward
-#date 2009-11-19
+title: Renraku OS: Networking, Hosted Mode, Moving Forward
+date: 2009-11-19
 
 There hasn't been any news on Renraku in a while, so I figured I'd throw up an update on what's going on.
 

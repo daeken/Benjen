@@ -1,5 +1,5 @@
-#title Renraku OS: The Way Up
-#date 2009-08-06
+title: Renraku OS: The Way Up
+date: 2009-08-06
 
 ![][1]   
    

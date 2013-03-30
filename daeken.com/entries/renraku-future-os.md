@@ -1,5 +1,5 @@
-#title Renraku: Future OS
-#date 2009-07-03
+title: Renraku: Future OS
+date: 2009-07-03
 
 Renraku is a family of managed research kernels I've been working on   
 for around 4 years. Though the goals and implementations have changed   

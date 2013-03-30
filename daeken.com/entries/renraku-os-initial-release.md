@@ -1,5 +1,5 @@
-#title Renraku OS: Initial Release
-#date 2009-07-17
+title: Renraku OS: Initial Release
+date: 2009-07-17
 
 ![][1]   
    

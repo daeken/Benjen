@@ -1,5 +1,5 @@
-#title Holy crap, it's 2013
-#date 2013-01-09
+title: Holy crap, it's 2013
+date: 2013-01-09
 
 It's a new year, so it's time for a quick wrapup post.
 

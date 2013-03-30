@@ -1,5 +1,5 @@
-#title Daeken Discount Program
-#date 2010-02-26
+title: Daeken Discount Program
+date: 2010-02-26
 
 (Edit: The Daeken Discount Program is closed.  While an interesting exercise, it resulted in only one sale, but it was of the 25% discount level so I can't complain too heavily.  If nothing else, it was fun to try something.)
 

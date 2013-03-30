@@ -1,5 +1,5 @@
-#title Reversing The Pokerstars Protocol, Part 1: Compression and transport 	basics
-#date 2009-08-19
+title: Reversing The Pokerstars Protocol, Part 1: Compression and transport 	basics
+date: 2009-08-19
 
 Let me start with a little background. I got into poker botting after reading James Devlin's great series on [Coding The Wheel](http://www.codingthewheel.com/). I tried a few different attempts at the IO layer (hooking the poker client directly, screenscraping (wrote a cool little library), etc) before settling on hacking the protocol directly. However, I also started getting into actually playing poker heavily, and I realized a little while ago that there's no way this bot will be profitable (including my time) unless I throw years of work at it, so I've decided to release my knowledge publicly. I've not seen anyone reversing the PStars (or any other service, in fact) protocol publicly, so I'm hoping to help out there.
 

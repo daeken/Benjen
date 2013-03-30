@@ -1,5 +1,5 @@
-#title So You Want To Be A Breaker, Pt. 1: Web Security
-#date 2013-03-17.1
+title: So You Want To Be A Breaker, Pt. 1: Web Security
+date: 2013-03-17.1
 
 In my opinion, there's nothing more interesting and challenging than the security field.
 When you come toe to toe with a particularly strong piece of software and you just *have* to break it, the only thing I can liken it to is a good game of Go.

@@ -1,5 +1,5 @@
-#title Emokit: Hacking the Emotiv EPOC Brain-Computer Interface
-#date 2010-09-13
+title: Emokit: Hacking the Emotiv EPOC Brain-Computer Interface
+date: 2010-09-13
 
 # Update
 

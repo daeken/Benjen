@@ -1,5 +1,5 @@
-#title New Job
-#date 2010-11-04
+title: New Job
+date: 2010-11-04
 
 # 
 

@@ -1,5 +1,5 @@
-#title Confusing Crypto Blobs
-#date 2012-10-20
+title: Confusing Crypto Blobs
+date: 2012-10-20
 
 # Introduction
 

@@ -1,5 +1,5 @@
-#title Onity's Plan To Mitigate Hotel Lock Hack
-#date 2012-08-17
+title: Onity's Plan To Mitigate Hotel Lock Hack
+date: 2012-08-17
 
 # Onity responds
 
