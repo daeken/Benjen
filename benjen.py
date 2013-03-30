@@ -2,7 +2,7 @@
 
 from glob import glob
 import codecs, datetime, re, shutil, sys, yaml
-from markdown import markdown
+from markdown import Markdown
 from functools import partial
 from mako.lookup import TemplateLookup
 from PyRSS2Gen import RSS2, RSSItem, Guid
@@ -29,27 +29,23 @@ class Benjen(object):
 
     title_sub = partial(re.compile(r'[^a-zA-Z0-9_\-]').sub, '_')
     def load_entries(self):
+        md = Markdown(extensions=['codehilite(guess_lang=False)', 'meta'])
         raw = (file(fn, 'r').read().decode('utf-8') for fn in glob('entries/*'))
 
         self.entries = []
         for entry in raw:
-            lines = entry.split("\n", 2)
-            if len(lines) == 3 and lines[0].startswith("#title") and lines[1].startswith("#date"):
-                title = lines[0][6:].strip()
-                date = lines[1][5:].strip()
-                entry = lines[2]
-            else:
+            html, meta = md.convert(entry), md.Meta
+            if 'title' not in meta or 'date' not in meta:
                 continue
-
+            title, date = meta['title'][0], meta['date'][0]
             print 'Processed', title
 
-            fn = date + '_' + self.title_sub(title) + '.html'
             self.entries.append(dict(
                 title=title,
                 date=date,
                 raw=entry,
-                html=markdown(entry, extensions=['codehilite(guess_lang=False)']),
-                link=fn
+                html=html,
+                link=date + '_' + self.title_sub(title) + '.html'
             ))
 
         self.entries.sort(lambda a, b: cmp(b['date'], a['date']))
