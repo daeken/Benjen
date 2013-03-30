@@ -25,7 +25,8 @@ I'm hoping to package this nicely as a git post-receive hook, so that you can ju
 (**Update**: This is now done and documented in the README.)
 
 **Update #2**: Benjen v1.1 is out with RSS support.  
-**Update #3**: Benjen v1.1.1 is out with some additional magic to support proper ordering of posts within a given day.
+**Update #3**: Benjen v1.1.1 is out with some additional magic to support proper ordering of posts within a given day.  
+**Update #4**: Benjen v1.2 is out, switching to Markdown metadata for title/date, simplifying the code and making it more extensible for the future.
 
 If anyone has other ideas, shoot me an email and let me know: [cody.brocious@gmail.com](mailto:cody.brocious@gmail.com)
 
