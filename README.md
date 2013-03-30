@@ -30,7 +30,7 @@ These should, however, contain the following lines at the beginning:
 	title: Entry Title Goes Here
 	date: YYYY-MM-DD
 
-Date must be in the YYYY-MM-DD form; however, you can optionally append '.X' to the end of the date, to signify which post it is in a given day.  **Note**: This format has changed as of v1.2, from the `#title` and `#date` format.  The included 'benjen_upgrade' utility will, when run from within your blog root (or given the path to the root), automatically update your entries from <=1.1 to the new format.
+Date must be in the YYYY-MM-DD form; however, you can optionally append '.X' to the end of the date, to signify which post it is in a given day.  **Note**: This format has changed as of v1.2, from the `#title` and `#date` format.  The included 'benjen-upgrade' utility will, when run from within your blog root (or given the path to the root), automatically update your entries from <=1.1 to the new format.
 
 The `templates` directory contains [Mako templates](http://www.makotemplates.org/).  There are three templates in use, with the following parameters passed in.
 
